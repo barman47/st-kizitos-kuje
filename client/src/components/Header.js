@@ -4,12 +4,12 @@ import Navigation from './Navigation'
 const Header = () => (
     <Fragment>
         <div className="header-top">
-            <p>
-                Catholic Archdiocese of Abuja. St. Kizito's Catholic Church, Kuje.
-                <span className="number-right">
-                    <span className="mdi mdi-phone"></span><span className="number">08012345678</span>
-                </span>
-            </p>
+            <span>
+                <span className="church-name">St. Kizito's Catholic Parish Kuje</span><br /><span className="archdiocese">Catholic Archdiocese of Abuja.</span> 
+            </span>
+            <span className="number-right">
+                <span className="mdi mdi-phone phone-icon"></span><span className="number">08012345678</span>
+            </span>
         </div>
         <Navigation />
     </Fragment>

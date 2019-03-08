@@ -1,0 +1,17 @@
+.welcome-message {
+    margin-top: $xl-size;
+    padding-left: $md-size;
+    padding-right: $md-size;
+    line-height: 1.5;
+
+    h3 {
+        text-align: left;
+        font-weight: 700;
+        color: darken($main-color, 10%);
+    }
+
+    p {
+        color: $dark-gray;
+        font-family: $quicksand;
+    }
+}

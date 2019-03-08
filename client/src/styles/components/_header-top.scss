@@ -1,12 +1,37 @@
 .header-top {
     background-color: $off-white;
-    padding: $medium-size;
+    padding: $sm-size;
+
+    .church-name {
+        font-family: $kalam;
+        font-size: $lg-font;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .archdiocese {
+        font-size: $md-font;
+        text-transform: uppercase;
+    }
 
     .number-right {
         float: right;
+        position: relative;
+        top: -$sm-size;
+    }
+
+    .phone-icon {
+        margin-right: 10px;
     }
 
     .number {
         color: red;
+    }
+}
+
+@media (max-width: $md-break-point) {
+    .number-right {
+        top: 1rem;
+        // top: $sm-size;
     }
 }

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import moment from 'moment';
-import { GET_MASS_READINGS, SET_MASS_READINGS } from './types';
+import { GET_MASS_READINGS } from './types';
 
 export const getMassReadings = () => dispatch => {
     const today = new moment().format('YYYYMMDD');
@@ -15,9 +15,3 @@ export const getMassReadings = () => dispatch => {
         })
         .catch(err => console.log(err));
 };
-
-// export const setMassReadings = () => {
-//     return {
-//         type: SET_MASS_READINGS
-//     };
-// };

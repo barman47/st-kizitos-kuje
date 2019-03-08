@@ -4,6 +4,21 @@
     box-sizing: boder-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
-    font-size: $default-font-size;
+    font-size: $default-font;
+}
+
+.underline {
+    border-bottom: 4px solid $main-color;
+    padding-bottom: 10px;
+}
+
+.section-header {
+    font-family: $raleway;
+    text-align: center;
+    color: #333;
 }

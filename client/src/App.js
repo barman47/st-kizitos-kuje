@@ -20,9 +20,9 @@ class App extends Component {
 				<Router>
 					<Fragment>
 						<Header />
-						<Route path="/" component={Home} exact />
-						<Route path="/about" component={About} exact />
-						<Route path="/gallery" component={Gallery} exact />
+						<Route path="/" component={Home} exact={true} />
+						<Route path="/about" component={About} exact={true} />
+						<Route path="/gallery" component={Gallery} exact={true} />
 						<Footer />
 					</Fragment>
 				</Router>
@@ -39,7 +39,7 @@ class App extends Component {
     var open = XMLHttpRequest.prototype.open;
     XMLHttpRequest.prototype.open = function() {
         var args = slice.call(arguments);
-        var targetOrigin = /^https?:\/\/([^\/]+)/i.exec(args[1]);
+        var targetOrigin = /^https?:\/\/([^/]+)/i.exec(args[1]);
         if (targetOrigin && targetOrigin[0].toLowerCase() !== origin &&
             targetOrigin[1] !== cors_api_host) {
             args[1] = cors_api_url + args[1];
@@ -47,5 +47,21 @@ class App extends Component {
         return open.apply(this, args);
     };
 })();
+// (function() {
+//     var cors_api_host = 'cors-anywhere.herokuapp.com';
+//     var cors_api_url = 'https://' + cors_api_host + '/';
+//     var slice = [].slice;
+//     var origin = window.location.protocol + '//' + window.location.host;
+//     var open = XMLHttpRequest.prototype.open;
+//     XMLHttpRequest.prototype.open = function() {
+//         var args = slice.call(arguments);
+//         var targetOrigin = /^https?:\/\/([^\/]+)/i.exec(args[1]);
+//         if (targetOrigin && targetOrigin[0].toLowerCase() !== origin &&
+//             targetOrigin[1] !== cors_api_host) {
+//             args[1] = cors_api_url + args[1];
+//         }
+//         return open.apply(this, args);
+//     };
+// })();
 
 export default App;

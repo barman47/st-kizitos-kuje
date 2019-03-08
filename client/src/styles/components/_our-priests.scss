@@ -1,0 +1,73 @@
+.pastoral-team {
+    background-color: darken($main-color, 10%);
+    margin-top: $xl-size; 
+    padding: $md-size;
+
+    .card {
+        background-color: $off-white;
+        background-color: darken($main-color, 10%);
+        cursor: pointer;
+    }
+
+    h3 {
+        color: #fff;
+        text-align: center;
+        font-family: $raleway;
+        font-weight: 700;
+    }
+
+    h3 + p {
+        color: $off-white;
+        font-family: $quicksand;
+        margin-top: $lg-size;
+        margin-bottom: $lg-size;
+    }
+
+    img {
+        cursor: pointer;
+    }
+
+    .priest-name {
+        font-family: $quicksand;
+        color: #fff;
+    }
+
+    .priest-title {
+        color: $off-white;
+        font-weight: 700;
+        font-family: $quicksand;
+    }
+
+    .card-action {
+        border-top-color: darken($off-white, 10%) !important;
+    }
+}
+
+// // Dark Theme Version
+// .pastoral-team {
+//     background-color: $off-white;
+//     margin-top: $xl-size; 
+//     padding: $md-size;
+
+//     h3 {
+//         text-align: center;
+//         font-family: $raleway;
+//     }
+
+//     .card {
+//         cursor: pointer;
+//         margin-top: $md-size;
+//     }
+
+//     img {
+//         cursor: pointer !important;
+//     }
+
+//     .card.small .card-image {
+//         max-height: 70% !important;
+//     }
+
+//     // .card.small .card-image+.card-content {
+//     //     max-height: 50% !important;
+//     // }
+// }

@@ -1,4 +1,37 @@
-// .nav-wrapper {
-//     background-color: #ffffff;
-//     box-shadow: none;
+nav {
+    box-shadow: none !important;
+}
+
+.nav-wrapper {
+    background-color: #fff;
+    border: none;
+}
+
+nav ul li a {
+    color: #333 !important;
+    // color: $main-color !important;
+}
+
+nav ul li a:hover {
+    background-color: transparent !important;
+    color: $main-color !important;
+}
+
+// .active-page {
+//     color: $main-color !important;
 // }
+
+  // Class for when element is above threshold
+.pin-top {
+    position: relative;
+}
+
+// Class for when element is below threshold
+.pin-bottom {
+    position: relative;
+}
+
+// Class for when element is pinned
+.pinned {
+    position: fixed !important;
+}

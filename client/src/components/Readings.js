@@ -11,8 +11,7 @@ class Readings extends Component {
         }
     }
     componentDidMount() {
-        console.log('Component Mounted');
-        this.props.getMassReadings();
+        // this.props.getMassReadings();
     }
 
     render () {

@@ -37,8 +37,8 @@ class Slider  extends Component {
                     <li>
                         <img src={slide3} alt="Slide 3" />
                         <div className="caption center-align">
-                            <h3>This is our big Tagline</h3>
-                            <h5 className="light grey-text text-lighten-3">Here's a Subtitle</h5>
+                            <h3 className="slide3-caption">Love God, Serve God; Everything is in that</h3>
+                            {/* <h5 className="light grey-text text-lighten-3">Here's a Subtitle</h5>*/}
                         </div>
                     </li>
                     <li>
