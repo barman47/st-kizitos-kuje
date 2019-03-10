@@ -1,0 +1,103 @@
+.countdown {
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    .day {
+        background-color: #262626;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: $sm-size;
+        width: 50%;
+    }
+
+    .day .card  {
+        border-top-left-radius: 20px !important;
+        font-family: $quicksand;
+        height: auto;
+        width: 30%;
+        text-align: center;
+    }
+
+    .day .card-content {
+        background-color: darken($main-color, 10%);
+        border-radius: 0px !important;
+    }
+
+    .card .card-action {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+
+    .date-text {
+        color: $off-white;
+        font-size: $lg-size;
+        font-weight: bold;
+        height: 80% !important;
+        width: 100% !important; 
+    }
+
+    .date-month {
+        color: darken($main-color, 10%);
+    }
+
+    .day .easter {
+        text-align: center;
+        width: 70%;
+    }
+
+    .easter h5 {
+        font-family: $roboto;
+    }
+
+    .easter p {
+        font-family: $quicksand;
+        color: darken($off-white, 20%);
+        font-style: italic;
+    }
+
+    .timer {
+        background-color: darken($main-color, 10%);
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: $lg-size;
+        width: 50%;
+        font-family: $quicksand;
+    }
+
+    .timer .timer-text {
+        border-right: 1px solid $dark-gray;
+        text-align: center;
+        width: 25%;
+    }
+
+    .timer-text h5 {
+        font-weight: bold;
+    }
+
+    .timer-text h6 {
+        color: $off-white;
+    }
+
+    #timer-day {
+        border-left: 1px solid $dark-gray !important;
+    }   
+}
+
+@media (max-width: $md-break-point) {
+    .countdown {
+        flex-direction: column;
+    }
+
+    .countdown .day {
+        width: 100%;
+    }
+
+    .timer {
+        width: 100% !important;
+    }
+}

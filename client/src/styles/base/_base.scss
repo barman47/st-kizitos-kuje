@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    padding: 0;
+    // padding: 0;
     box-sizing: boder-box;
 }
 
@@ -10,6 +10,7 @@ html, body {
 
 body {
     font-size: $default-font;
+    overflow-x: hidden;
 }
 
 .underline {

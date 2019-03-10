@@ -3,7 +3,10 @@ import Slider from './Slider';
 // import Readings from './Readings';
 import OurPriests from './OurPriests';
 import Values from './Values';
-import MassDays from './MassDays';
+import WorshipTime from './WorshipTime';
+import EasterCountdown from './EasterCountdown';
+import Parallax from './Parallax';
+import GoogleMap from './GoogleMap';
 
 const Home = () => (
     <main>
@@ -17,7 +20,10 @@ const Home = () => (
         {/* <Readings />*/}
         <Values />
         <OurPriests />
-        <MassDays />
+        <WorshipTime />
+        <EasterCountdown />
+        <Parallax />
+        <GoogleMap />
     </main>
 );
 

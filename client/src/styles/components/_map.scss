@@ -1,0 +1,14 @@
+#map-header {
+    color: $main-color;
+    margin-top: $lg-size;
+    margin-bottom: $lg-size;
+    text-align: center;
+}
+
+.google-map {
+    border: none;
+    font-family: $raleway;
+    font-weight: bold;
+    width: 100%;
+    height: 400px;
+}
