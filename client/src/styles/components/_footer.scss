@@ -1,0 +1,30 @@
+.footer {
+    background-color: $off-white;
+    color: lighten($off-black, 30%);
+    font-family: $roboto;
+    display: flex;
+    justify-content: space-around;
+    justify-content: space-between;
+    padding: $md-size;
+    margin-top: -10px;
+    font-weight: lighter;
+
+    .domstech a {
+        color: lighten($off-black, 30%) !important;
+    }
+
+    .domstech a:hover {
+        color: #039be5 !important;
+    }
+}
+
+@media (max-width: $md-break-point) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .domstech {
+        margin-top: $md-size;
+    }
+}
