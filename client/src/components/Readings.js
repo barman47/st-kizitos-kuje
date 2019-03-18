@@ -10,8 +10,9 @@ class Readings extends Component {
             readings: {}
         }
     }
+    
     componentDidMount() {
-        // this.props.getMassReadings();
+        this.props.getMassReadings();
     }
 
     render () {

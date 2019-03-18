@@ -1,0 +1,83 @@
+.contact-form {
+    background-color: $off-white;
+    // border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    margin: $ultra-large auto !important;
+    padding: $lg-size;
+
+    h3, p {
+        font-family: $quicksand;
+        color: $dark-gray;
+        text-align: center;
+    }
+
+    p {
+        margin-bottom: $xxl-size;
+    }
+
+    h3 {
+        font-weight: 700;
+    }
+
+    .input-field input[type=text] {
+        text-transform: capitalize;
+    }
+
+    .input-field input[type=email] {
+        text-transform: lowercase;
+    }
+
+    .input-field label, input, textarea {
+        font-family: $quicksand;
+    }
+
+    /* label color */
+   .input-field label {
+        color: $dark-gray;
+    }
+
+    /* label focus color */
+    .input-field input[type=text]:focus + label, .input-field input[type=email]:focus + label, .input-field textarea:focus + label {
+        color: darken($main-color, 10%) !important;
+    }
+    /* label underline focus color */
+    .input-field input[type=text]:focus, .input-field input[type=email]:focus, .input-field textarea:focus {
+        border-bottom: 1px solid darken($main-color, 10%) !important;
+        box-shadow: 0 1px 0 0 darken($main-color, 10%) !important;
+    }
+
+    // label valid color
+    .input-field input[type=text].valid + label, .input-field input[type=email].valid + label, .input-field textarea.valid + label {
+        color: $success;
+    }
+
+
+    // label invalid color
+    .input-field input[type=text].invalid + label, .input-field input[type=email].invalid + label, .input-field textarea.invalid + label {
+        color: $error;
+    }
+
+    /* valid color */
+    .input-field input[type=text].valid {
+        border-bottom: 1px solid $success !important;
+        box-shadow: 0 1px 0 0 $success !important;
+    }
+    /* invalid color */
+    .input-field input[type=text].invalid {
+        border-bottom: 1px solid $error !important;
+        box-shadow: 0 1px 0 0 $error !important;
+    }
+
+    button {
+        background-color: darken($main-color, 10%) !important;
+        font-family: $quicksand;
+    }
+
+    button:hover {
+        background-color: darken($main-color, 20%);
+    }
+
+    button:visited {
+        background-color: darken($main-color, 20%);
+    }
+}

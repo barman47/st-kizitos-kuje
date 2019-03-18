@@ -9,6 +9,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import About from './components/About';
 import Gallery from './components/Gallery';
+import Contact from './components/Contact';
 
 // Remove html tags replace(/(<([^>]+)>)/ig,"");
 // Remove html tags .replace(/<[^>]+>/g, '');
@@ -23,6 +24,7 @@ class App extends Component {
 						<Route path="/" component={Home} exact={true} />
 						<Route path="/about" component={About} exact={true} />
 						<Route path="/gallery" component={Gallery} exact={true} />
+						<Route path="/contact" component={Contact} exact={true} />
 						<Footer />
 					</Fragment>
 				</Router>

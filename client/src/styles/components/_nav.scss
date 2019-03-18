@@ -1,9 +1,27 @@
 nav {
-    box-shadow: none !important;
+    background-color: #fff !important;
+    // box-shadow: none !important;
+    position: relative;
+    z-index: 99 !important;
+    transition: 1.5s linear all;
+}
+
+nav#push.sticky {
+    background-color: rgba(204, 172, 0, 0.95) !important;
+    // box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2) !important;
+    // Set background-color with opacity
+}
+
+nav#push.sticky ul li a {
+    color: $off-white !important;
+}
+
+nav#push.sticky ul li a:hover {
+    color: $main-color !important;
 }
 
 .nav-wrapper {
-    background-color: #fff;
+    background-color: transparent;
     border: none;
 }
 
@@ -13,29 +31,29 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: transparent !important;
-    color: $main-color !important;
+    // background-color: transparent !important;
+    color: darken($main-color, 5%) !important;
+}
+
+.home-icon {
+    margin-right: 10px;
+}
+
+.menu-icon {
+    color: $dark-gray;
 }
 
 // .active-page {
 //     color: $main-color !important;
 // }
 
-  // Class for when element is above threshold
-.pin-top {
-    position: relative;
-}
-
-// Class for when element is below threshold
-.pin-bottom {
-    position: relative;
-}
-
-// Class for when element is pinned
-.pinned {
-    position: fixed !important;
-}
-
 .sidenav-trigger {
     color: $off-black;
+}
+
+.sticky {
+    background-color: red;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
 }

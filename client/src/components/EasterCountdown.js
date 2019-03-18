@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 
 class EasterCountdown extends Component {
+    interval = null;
     constructor (props) {
         super(props);
+        
         this.state = {
             time: {}
         }
     }
 
+
     componentDidMount () {
         const countDownDate = new Date("April 21, 2019 00:00:00").getTime();
-        const x = setInterval(() => {
+        this.interval = setInterval(() => {
             const now = new Date().getTime();
             const distance = countDownDate - now;
 
@@ -20,7 +23,7 @@ class EasterCountdown extends Component {
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             if (distance < 0) {
-                clearInterval(x);
+                clearInterval(this.interval);
                 this.setState({
                     ...this.state,
                     time: {
@@ -42,6 +45,10 @@ class EasterCountdown extends Component {
                 });
             }
         }, 1000);
+    }
+
+    componentWillUnmount () {
+        clearInterval(this.interval);
     }
 
     render () {

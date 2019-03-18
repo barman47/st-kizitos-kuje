@@ -1,15 +1,50 @@
 const express = require('express');
-const path = require('path')
+const sgMail = require('@sendgrid/mail');
+const path = require('path');
+
+const validateMessageInput = require('./validation/message');
 
 const app = express();
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 app.use(express.static(path.join(__dirname, 'client', 'build')));
 
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/build'));
-}
+// if (process.env.NODE_ENV === 'production') {
+//     app.use(express.static('client/build'));
+// }
 
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+});
+
+app.post('/sendMessage', (req, res) => {
+    const { errors, isValid } = validateMessageInput(req.body);
+
+    // CONTINUE HERE................
+
+    if (!isValid) {
+        return res.status(400).json(errors);
+    }
+
+    sgMail.setApiKey('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');
+    const msg = {
+        to: 'nomsouzoanya@yahoo.co.uk',
+        // to: 'stkizito\'sec17@gmail.com',
+        from: 'test@example.com',
+        subject: 'Sending with SendGrid is Fun',
+        // text: 'and easy to do anywhere, even with Node.js',
+        html: '<strong>This is a test email from the St. Kizitos website. Please let me know if you received it.</strong>',
+    };
+    sgMail.send(msg)
+        .then(() => {
+            console.log('Message Sent...');
+            return res.status(200).json({ msg: 'Message sent. You will be contacted shortly.' });
+        })
+        .catch(err => {
+            console.log(err);
+            return res.status(500).json(err);
+        });
 });
 
 const port = process.env.PORT || 5000;

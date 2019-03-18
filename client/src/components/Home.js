@@ -17,7 +17,7 @@ const Home = () => (
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae perspiciatis esse ea! Officiis quas ex ab praesentium molestiae repellat voluptas in, sapiente eligendi quidem esse dolorem nostrum, dolor, quisquam asperiores eveniet voluptatem cumque nemo. Veritatis cum voluptates eaque autem! Hic fugiat aliquam ducimus atque nobis ipsam est iste reiciendis laudantium!
             </p>
         </div>
-        {/* <Readings />*/}
+        {/*<Readings />*/}
         <Values />
         <OurPriests />
         <WorshipTime />

@@ -8,6 +8,8 @@ $light-black: lighten($off-black, 40%);
 $transparent-black: rgba(0, 0, 0, 0.5);
 $dark-gray: #666;
 $off-white: #f3f3f3;
+$success: #4caf50;
+$error: #f44336;
 
 // fonts
 $raleway: 'Raleway', sans-serif;
@@ -28,6 +30,10 @@ $md-size: 2rem;
 $lg-size: 2.5rem;
 $xl-size: 3rem;
 $xxl-size: 4rem;
+$xxxl-size: 5rem;
+$ultra-large: 6rem;
+$ultra-large-2x: 7.5rem;
 
 // breakpoints 
+$lg-break-point: 1024px;
 $md-break-point: 768px;
