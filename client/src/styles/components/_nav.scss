@@ -1,6 +1,5 @@
 nav {
     background-color: #fff !important;
-    // box-shadow: none !important;
     position: relative;
     z-index: 99 !important;
     transition: 1.5s linear all;
@@ -8,8 +7,6 @@ nav {
 
 nav#push.sticky {
     background-color: rgba(204, 172, 0, 0.95) !important;
-    // box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2) !important;
-    // Set background-color with opacity
 }
 
 nav#push.sticky ul li a {
@@ -23,15 +20,15 @@ nav#push.sticky ul li a:hover {
 .nav-wrapper {
     background-color: transparent;
     border: none;
+    padding-left: $md-size;
+    padding-right: $md-size;
 }
 
 nav ul li a {
     color: #333 !important;
-    // color: $main-color !important;
 }
 
 nav ul li a:hover {
-    // background-color: transparent !important;
     color: darken($main-color, 5%) !important;
 }
 

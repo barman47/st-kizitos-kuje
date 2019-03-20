@@ -1,0 +1,51 @@
+.pastoral-team {
+    // background-color: darken($main-color, 10%);
+    margin-bottom: $xxl-size; 
+    // padding: $md-size;
+
+    .card {
+        // background-color: $off-white;
+        cursor: pointer;
+    }
+
+    h3 {
+        color: $dark-gray;
+        text-align: center;
+        font-family: $raleway;
+        font-weight: 700;
+        margin-bottom: $lg-size;
+    }
+
+    h3 + p {
+        color: $off-white;
+        font-family: $quicksand;
+        margin-top: $lg-size;
+        margin-bottom: $lg-size;
+    }
+
+    img {
+        cursor: pointer;
+    }
+
+    name {
+        font-family: $quicksand;
+        color: #fff;
+    }
+
+    .title {
+        color: $dark-gray;
+        font-weight: 700;
+        font-family: $quicksand;
+        text-align: center;
+    }
+
+    .card-action {
+        border-top-color: darken($off-white, 10%) !important;
+    }
+}
+
+@media (max-width: $md-break-point) {
+    .row .col.s12 {
+        margin-bottom: $xxl-size;
+    }
+}

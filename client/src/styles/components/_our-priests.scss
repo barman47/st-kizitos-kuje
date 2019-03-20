@@ -1,10 +1,9 @@
-.pastoral-team {
+.our-priests {
     background-color: darken($main-color, 10%);
     margin-top: $xl-size; 
     padding: $md-size;
 
     .card {
-        background-color: $off-white;
         background-color: darken($main-color, 10%);
         cursor: pointer;
     }

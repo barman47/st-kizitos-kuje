@@ -27,14 +27,18 @@ app.post('/sendMessage', (req, res) => {
         return res.status(400).json(errors);
     }
 
-    sgMail.setApiKey('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');
+    sgMail.setApiKey(process.env.SENGRID_API_KEY);
+    const messageContent = `
+        <h3>New Message<h3><hr>
+        <h5>From: ${req.body.name}</h5>
+        <p>${req.body.message}</p>
+    `;
     const msg = {
-        to: 'nomsouzoanya@yahoo.co.uk',
-        // to: 'stkizito\'sec17@gmail.com',
-        from: 'test@example.com',
-        subject: 'Sending with SendGrid is Fun',
+        to: 'uzoanyadominic@gmail.com',
+        from: req.body.email,
+        subject: req.body.subject,
         // text: 'and easy to do anywhere, even with Node.js',
-        html: '<strong>This is a test email from the St. Kizitos website. Please let me know if you received it.</strong>',
+        html: messageContent
     };
     sgMail.send(msg)
         .then(() => {

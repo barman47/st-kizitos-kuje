@@ -12,7 +12,7 @@ class OurPriests extends Component {
 
     render () {
         return (
-            <section className="pastoral-team">
+            <section className="our-priests">
                 <h3>Meet our Priests</h3>
                 <p>St. Kizito Parish Kuje , One Big Family is blessed with these humble servants of God. We pray that the good Lord in his infinite mercy will continue to strengthen and protect them as they serve him.</p>
                 <div className="row">
