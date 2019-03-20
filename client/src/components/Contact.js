@@ -16,12 +16,6 @@ class Contact extends Component {
         }
     }
 
-    // componentWillReceiveProps (nextProps) {
-    //     if (nextProps.errors) {
-    //         this.setState({ errors: nextProps.errors });
-    //     }
-    // }
-
     onChange = (e) => {
         this.setState({ [e.target.name]: e.target.value });
     }

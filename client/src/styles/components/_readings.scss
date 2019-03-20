@@ -1,0 +1,43 @@
+.readings {
+    font-family: $quicksand;
+    margin-top: $xxl-size !important;
+    margin-bottom: $xxl-size !important;
+
+    .readings-header {
+        background-color: darken($main-color, 10%);
+        padding: $sm-size;
+        color: #fff;
+    }
+
+    div {
+        border: 1px solid darken($off-white, 10%);
+        border-radius: 5px;
+        margin-bottom: $xl-size;
+        padding: $md-size;
+    }
+
+    .date {
+        color: $off-white;
+    }
+    .catholic-day {
+        text-align: center;
+    }
+
+    h4 {
+        font-family: $kalam;
+    }
+
+    .source {
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    .heading {
+        font-weight: bold;
+        margin-bottom: $sm-size;
+    }
+
+    .text {
+        color: $dark-gray;
+    }
+}

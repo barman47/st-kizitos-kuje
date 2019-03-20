@@ -1,17 +1,24 @@
 import axios from 'axios';
 import moment from 'moment';
-import { GET_MASS_READINGS } from './types';
+import { SET_MASS_READINGS } from './types';
 
 export const getMassReadings = () => dispatch => {
     const today = new moment().format('YYYYMMDD');
-    console.log('Fetching readings...');
     axios.get(`http://universalis.com/Europe.England.Westminster/${today}/jsonpmass.js`)
         .then(res => {
-            console.log(res.data)
+            let newResponse = res.data.replace(/(<([^>]+)>)/ig,"");
+            newResponse = newResponse.replace('universalisCallback(', '');
+            newResponse = newResponse.replace(');', '');
+            newResponse = newResponse.replace(/&#8216;/ig, "''");
+            newResponse = newResponse.replace(/&#8217;/ig, "''");
+            newResponse = newResponse.replace(/&#160;/ig, ' ');
+            newResponse = JSON.parse(newResponse);
             dispatch({
-                type: GET_MASS_READINGS,
-                payload: res.data
+                type:SET_MASS_READINGS,
+                payload: newResponse
             })
         })
-        .catch(err => console.log(err));
+        .catch(err => {
+            if (err) throw err;
+        });
 };

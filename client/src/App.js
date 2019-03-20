@@ -7,13 +7,12 @@ import store from './store';
 import Home from './components/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Readings from './components/Readings';
 import About from './components/About';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import PastoralTeam from './components/PastoralTeam';
-
-// Remove html tags replace(/(<([^>]+)>)/ig,"");
-// Remove html tags .replace(/<[^>]+>/g, '');
+import ParishProgrammes from './components/ParishProgrammes';
 
 class App extends Component {
 	render() {
@@ -23,8 +22,10 @@ class App extends Component {
 					<Fragment>
 						<Header />
 						<Route path="/" component={Home} exact={true} />
+						<Route path="/readings" component={Readings} exact={true} />
 						<Route path="/about" component={About} exact={true} />
 						<Route path="/gallery" component={Gallery} exact={true} />
+						<Route path="/parishProgrammes" component={ParishProgrammes} exact={true} />
 						<Route path="/pastoralTeam" component={PastoralTeam} exact={true} />
 						<Route path="/contact" component={Contact} exact={true} />
 						<Footer />
