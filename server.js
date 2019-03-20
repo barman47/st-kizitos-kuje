@@ -27,7 +27,7 @@ app.post('/sendMessage', (req, res) => {
         return res.status(400).json(errors);
     }
 
-    sgMail.setApiKey(process.env.SENGRID_API_KEY);
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     const messageContent = `
         <h3>New Message<h3><hr>
         <h5>From: ${req.body.name}</h5>
