@@ -1,8 +1,45 @@
 nav {
     background-color: #fff !important;
+    font-family: $quicksand !important;
     position: relative;
     z-index: 99 !important;
     transition: 1.5s linear all;
+}
+
+#mobile-menu {
+    background: linear-gradient(to bottom, darken($main-color, 10%), $main-color);
+    width: 50vw !important;
+}
+
+#mobile-menu li a {
+    color: $off-white;
+    font-family: $quicksand !important;
+    font-size: 0.8rem;
+}
+
+nav .sidenav-trigger {
+    float: right !important;
+    margin-right: -10px !important;
+}
+
+.logo-container {
+    position: absolute;
+}
+
+.vincentian-logo {
+    max-width: 70px;
+    max-height: 70px;
+    margin-top: 7px;
+    margin-bottom: 7px; 
+}
+
+.logo-text {
+    color: $off-black;
+    font-size: 1rem;
+    font-family: $kalam;
+    position: relative;
+    top: -$sm-size;
+    left: -$sm-size;
 }
 
 nav#push.sticky {
@@ -15,6 +52,10 @@ nav#push.sticky ul li a {
 
 nav#push.sticky ul li a:hover {
     color: $main-color !important;
+}
+
+nav#push.sticky .logo-text, nav#push.sticky .menu-icon {
+    color: $off-white;
 }
 
 .nav-wrapper {
@@ -53,4 +94,52 @@ nav ul li a:hover {
     position: fixed !important;
     top: 0;
     width: 100%;
+}
+
+ul.dropdown {
+    background-color: $off-white !important;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    right: 0;
+    width: 15%;
+}
+
+.close-button {
+    color: $off-white;
+    padding-left: $md-size;
+}
+.close-button:hover {
+    color: $error;
+    cursor: pointer;
+}
+
+.mdi-menu-down:before {
+    position: relative !important;
+    top: 7px !important;
+}
+
+span.mdi.mdi-menu-down.mobile-menu-down.right {
+    position: relative;
+    left: -75px !important;
+    top: -3px;
+}
+
+.link ul li {
+    width: 100%;
+    text-align: center;
+}
+
+nav#push.sticky .link ul {
+    background-color: darken($main-color, 10%) !important;   
+}
+
+@media (max-width: $md-break-point) {
+    .logo-container {
+        position: absolute;
+    }
+
+    .vincentian-logo {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
 }

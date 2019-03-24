@@ -1,0 +1,38 @@
+.announcements {
+    margin-top: $xl-size !important;
+    margin-bottom: $xl-size !important;
+
+    h3 {
+        background-color: rgba(76, 175, 80, 0.15);
+        border-radius: 5px;
+        color: $off-black;
+        font-family: $raleway;
+        font-size: $lg-size;
+        font-weight: bold;
+        padding-top: $md-size;
+        padding-bottom: $md-size;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    li {
+        font-family: $quicksand;
+        margin-bottom: $md-size;
+    }
+
+    ol li h5 {
+        font-weight: bold;
+    }
+}
+
+@media (max-width: $md-break-point) {
+    .announcements {
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        h5 {
+            font-size: $sm-size;
+        }
+    }
+}

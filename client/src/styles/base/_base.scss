@@ -23,3 +23,13 @@ body {
     text-align: center;
     color: #333;
 }
+
+.success-toast {
+    background-color: $success !important;
+    color: $off-white !important;
+}
+
+.error-toast {
+    background-color: $error !important;
+    color: $off-white !important;
+}

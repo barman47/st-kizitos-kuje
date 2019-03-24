@@ -14,7 +14,9 @@ class Readings extends Component {
 
     componentWillReceiveProps (nextProps) {
         if (nextProps.readings.massReadings) {
-            this.setState({ readings: nextProps.readings.massReadings });
+            this.setState({ 
+                readings: nextProps.readings.massReadings,
+            });
         }
     }
     

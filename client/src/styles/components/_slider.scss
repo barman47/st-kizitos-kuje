@@ -4,4 +4,8 @@
         background-color: $transparent-black;
         color: $main-color;
     }
+
+    .indicators .indicator-item.active {
+        background-color: darken($main-color, 10%) !important;
+    }
 }

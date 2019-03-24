@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import { Helmet } from 'react-helmet';
 import axios from 'axios';
 import classnames from 'classnames';
 import M from 'materialize-css';
@@ -36,7 +37,8 @@ class Contact extends Component {
         axios.post('/sendMessage', newContact)
             .then(res => {
                 M.toast({ 
-                    html: res.data.msg
+                    html: res.data.msg,
+                    classes: 'success-toast'
                 });
                 this.setState({
                     name: '',
@@ -58,7 +60,14 @@ class Contact extends Component {
                     });
                 } else {
                     M.toast({ 
-                        html: 'Message not sent. Try again.'
+                        html: 'Message not sent. Try again.',
+                        classes: 'error-toast',
+                        completeCallback: () => {
+                            this.setState({
+                                ...this.state,
+                                buttonText: 'Send'
+                            });
+                        }
                     }); 
                 }
             });
@@ -67,77 +76,85 @@ class Contact extends Component {
     render () {
         const { errors } = this.state;
         return (
-            <div className="contact-form row container">
-                <form onSubmit={this.onSubmit}>
-                    <div>
-                        <h3>Contact Us</h3>
-                        <p>Have a question or suggestion? Please leave a message.</p>   
+            <Fragment>
+                <Helmet>
+                    <title>Contact | St. Kizito's Catholic Parish, Kuje - Abuja.</title>
+                </Helmet>
+                <section className="contact-section">
+                    <div className="contact-form row container">
+                        <form onSubmit={this.onSubmit}>
+                            <div>
+                                <h3>Contact Us</h3>
+                                <p>Have a question or suggestion? Please leave a message.</p>   
+                            </div>
+                            <div className="col s12 m6 l6 input-field">
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    className={classnames('validate', {
+                                        'invalid': errors.name
+                                    })}
+                                    onChange={this.onChange}
+                                    value={this.state.name} 
+                                    autoFocus
+                                />
+                                <label htmlFor="name">Enter Full Name</label>
+                                <span className="helper-text" data-error={errors.name}></span>
+                            </div>
+                            <div className="col s12 m6 l6 input-field">
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email"
+                                    className={classnames('validate', {
+                                        'invalid': errors.email
+                                    })}
+                                    onChange={this.onChange} 
+                                    value={this.state.email} 
+                                />
+                                <label htmlFor="email">Enter Email Address</label>
+                                <span className="helper-text" data-error={errors.email}>e.g. john@doe.com</span>
+                            </div>
+                            <div className="col s12 m12 l12 input-field">
+                                <input 
+                                    type="text" 
+                                    id="subject" 
+                                    name="subject" 
+                                    className={classnames('validate', {
+                                        'invalid': errors.subject
+                                    })}
+                                    onChange={this.onChange} 
+                                    value={this.state.subject} 
+                                />
+                                <label htmlFor="subject">Message Subject</label>
+                                <span className="helper-text" data-error={errors.subject}></span>
+                            </div>
+                            <div className="col s12 m12 l12 input-field">
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    className={classnames('materialize-textarea validate', {
+                                        'invalid': errors.message
+                                    })}
+                                    onChange={this.onChange} 
+                                    value={this.state.message}>
+                                </textarea>
+                                <label htmlFor="name">Enter Message here...</label>
+                                <span className="helper-text" data-error={errors.message}></span>
+                            </div>
+                            <div className="col s12">
+                                <button 
+                                    className="btn"
+                                >
+                                    {this.state.buttonText}
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                    <div className="col s12 m6 l6 input-field">
-                        <input 
-                            type="text" 
-                            id="name" 
-                            name="name" 
-                            className={classnames('validate', {
-                                'invalid': errors.name
-                            })}
-                            onChange={this.onChange}
-                            value={this.state.name} 
-                            autoFocus
-                        />
-                        <label htmlFor="name">Enter Full Name</label>
-                        <span className="helper-text" data-error={errors.name}></span>
-                    </div>
-                    <div className="col s12 m6 l6 input-field">
-                        <input 
-                            type="email" 
-                            id="email" 
-                            name="email"
-                            className={classnames('validate', {
-                                'invalid': errors.email
-                            })}
-                            onChange={this.onChange} 
-                            value={this.state.email} 
-                        />
-                        <label htmlFor="email">Enter Email Address</label>
-                        <span className="helper-text" data-error={errors.email}>e.g. john@doe.com</span>
-                    </div>
-                    <div className="col s12 m12 l12 input-field">
-                        <input 
-                            type="text" 
-                            id="subject" 
-                            name="subject" 
-                            className={classnames('validate', {
-                                'invalid': errors.subject
-                            })}
-                            onChange={this.onChange} 
-                            value={this.state.subject} 
-                        />
-                        <label htmlFor="subject">Message Subject</label>
-                        <span className="helper-text" data-error={errors.subject}></span>
-                    </div>
-                    <div className="col s12 m12 l12 input-field">
-                        <textarea 
-                            id="message" 
-                            name="message" 
-                            className={classnames('materialize-textarea validate', {
-                                'invalid': errors.message
-                            })}
-                            onChange={this.onChange} 
-                            value={this.state.message}>
-                        </textarea>
-                        <label htmlFor="name">Enter Message here...</label>
-                        <span className="helper-text" data-error={errors.message}></span>
-                    </div>
-                    <div className="col s12">
-                        <button 
-                            className="btn"
-                        >
-                            {this.state.buttonText}
-                        </button>
-                    </div>
-                </form>
-            </div>
+                </section>
+            </Fragment>
+        
         );
     }
 }

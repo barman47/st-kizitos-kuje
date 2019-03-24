@@ -1,0 +1,37 @@
+.organization-heads {
+    color: $dark-gray;
+    font-family: $quicksand;
+    text-align: center;
+
+    .card {
+        border: 1px solid rgba(160,160,160,0.2);
+        box-shadow: none;
+    }
+
+    span {
+        
+        font-size: $xl-font;
+    }
+
+    .card .card-content, .card .card-action {
+        padding: 5px !important;
+    }
+
+    .organization-heads__name {
+    
+    }
+
+    .organization-heads__position {
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 411px) {
+    .row {
+        padding-left: $xl-size !important; 
+        padding-right: $xl-size !important; 
+    }
+    // .row div.col {        
+    //     width: 70% !important;
+    // }
+}
