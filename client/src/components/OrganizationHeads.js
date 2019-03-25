@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Helmet } from 'react-helmet';
-import OrganizationHeadsPartial from './OrganizationHeadsPartial';
+import OrganizationHeadsPartial from './common/OrganizationHeadsPartial';
 
 const OrganizationHeads = () => (
     <Fragment>

@@ -1,8 +1,9 @@
 import axios from 'axios';
 import moment from 'moment';
-import { SET_MASS_READINGS } from './types';
+import { SET_MASS_READINGS, READINGS_LOADING } from './types';
 
 export const getMassReadings = () => dispatch => {
+    dispatch(setReadingsLoading());
     const today = new moment().format('YYYYMMDD');
     axios.get(`http://universalis.com/Europe.England.Westminster/${today}/jsonpmass.js`)
         .then(res => {
@@ -20,9 +21,18 @@ export const getMassReadings = () => dispatch => {
             dispatch({
                 type:SET_MASS_READINGS,
                 payload: newResponse
-            })
+            });
         })
         .catch(err => {
-            if (err) throw err;
+            dispatch({
+                type:SET_MASS_READINGS,
+                payload: {}
+            });
         });
+};
+
+export const setReadingsLoading = () => {
+    return {
+        type: READINGS_LOADING
+    }
 };
