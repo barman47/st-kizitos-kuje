@@ -22,8 +22,6 @@ app.get('*', (req, res) => {
 app.post('/sendMessage', (req, res) => {
     const { errors, isValid } = validateMessageInput(req.body);
 
-    // CONTINUE HERE................
-
     if (!isValid) {
         return res.status(400).json(errors);
     }

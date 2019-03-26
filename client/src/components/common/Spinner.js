@@ -3,7 +3,7 @@ import spinner from './spinner.gif';
 
 export default () => {
     return (
-        <div>
+        <div style={{ width: '100vw', height: '100vh' }}>
             <img 
                 src={spinner} 
                 alt="Loading..."
