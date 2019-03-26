@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react';
 import { Helmet } from 'react-helmet';
 import PastoralTeamCard from './common/PastoralTeamCard';
 import pope from '../img/pope.jpg';
+import onaiyekan from '../img/Onaiyekan1.jpg';
+import anselm from '../img/anselm.jpg';
 
 class PastoralTeam extends Component {
     componentDidMount () {
@@ -28,15 +30,15 @@ class PastoralTeam extends Component {
                         </div>
                         <div className="col s12 m6 l3">
                             <PastoralTeamCard 
-                                src={pope}
+                                src={onaiyekan}
                                 alt="Cardinal Onaiyekan"
-                                name="His Eminence, John Cardinal Onaiyekan"
+                                name="John Cardinal Onaiyekan"
                                 position="Archbishop of Abuja"
                             />
                         </div>
                         <div className="col s12 m6 l3">
                             <PastoralTeamCard 
-                                src={pope}
+                                src={anselm}
                                 alt="Bishop Anselm Umoren"
                                 name="Most Rev. Anselm Umoren, MSP"
                                 position="Auxiliary Bishop of Abuja"

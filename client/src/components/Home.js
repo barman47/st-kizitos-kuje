@@ -18,7 +18,10 @@ const Home = () => (
             <div className="welcome-message">
                 <h3 className="section-header">Welcome!</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae perspiciatis esse ea! Officiis quas ex ab praesentium molestiae repellat voluptas in, sapiente eligendi quidem esse dolorem nostrum, dolor, quisquam asperiores eveniet voluptatem cumque nemo. Veritatis cum voluptates eaque autem! Hic fugiat aliquam ducimus atque nobis ipsam est iste reiciendis laudantium!
+                    St Kizito! One Big Family!! Welcome to St. Kizito website, dear friends. Welcome to the home of hope, promise and hospitality.    
+                </p>
+                <p>
+                    Connecting families, connecting societies, groups and individuals, connecting the clergy and the religious.
                 </p>
             </div>
             <Values />
