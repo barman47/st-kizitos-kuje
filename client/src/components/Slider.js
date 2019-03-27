@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import M from 'materialize-css';
-import slide1 from '../img/bread.jpg';
-import slide2 from '../img/rosary.jpg';
+import slide1 from '../img/church-building.JPG';
+import slide2 from '../img/altar.JPG';
 import slide3 from '../img/pray.jpg';
-import slide4 from '../img/cross.jpg';
-import slide5 from '../img/our-lady.jpg';
+import slide4 from '../img/church-interior.JPG';
+import slide5 from '../img/grotto.JPG';
 
 class Slider  extends Component {
 
