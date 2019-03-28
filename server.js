@@ -28,11 +28,12 @@ app.post('/sendMessage', (req, res) => {
 
     // sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     const transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
+        host: 'smtp.mail.yahoo.com',
         port: 465,
+        secure: true,
         auth: {
-            user: 'uzoanyadominic@gmail.com',
-            pass: 'VICEcity@47'
+            user: 'nomsouzoanya@yahoo.co.uk',
+            pass: 'vicecity'
         },
         tls: {
             rejectUnauthorized: false
@@ -44,7 +45,7 @@ app.post('/sendMessage', (req, res) => {
         <p>${req.body.message}</p>
     `;
     const msg = {
-        to: 'erupaul821@gmail.com',
+        to: 'uzoanyadominic@gmail.com',
         from: req.body.email,
         subject: req.body.subject,
         // text: 'and easy to do anywhere, even with Node.js',
