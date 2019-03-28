@@ -28,12 +28,11 @@ app.post('/sendMessage', (req, res) => {
 
     // sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     const transporter = nodemailer.createTransport({
-        host: 'smtp-relay.sendinblue.com',
-        port: 587,
-
+        host: 'smtp.gmail.com',
+        port: 465,
         auth: {
-            user: 'nomsouzoanya@yahoo.co.uk',
-            pass: 'wsLqyTESQxtp5v0M'
+            user: 'uzoanyadominic@gmail.com',
+            pass: 'VICEcity@47'
         },
         tls: {
             rejectUnauthorized: false
@@ -45,7 +44,7 @@ app.post('/sendMessage', (req, res) => {
         <p>${req.body.message}</p>
     `;
     const msg = {
-        to: 'nomsouzoanya@yahoo.co.uk',
+        to: 'erupaul821@gmail.com',
         from: req.body.email,
         subject: req.body.subject,
         // text: 'and easy to do anywhere, even with Node.js',
