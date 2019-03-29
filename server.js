@@ -40,14 +40,14 @@ app.post('/sendMessage', (req, res) => {
         }
     });
     const messageContent = `
-        <h3>New Message<h3><hr>
+        <h3>${req.body.subject}<hr>
         <h5>From: ${req.body.name}</h5>
         <p>${req.body.message}</p>
     `;
     const msg = {
-        to: 'uzoanyadominic@gmail.com',
+        to: 'stkizitosec17@gmail.com',
         from: req.body.email,
-        subject: req.body.subject,
+        subject: 'Message From St. Kizito Website',
         // text: 'and easy to do anywhere, even with Node.js',
         html: messageContent
     };
