@@ -1,11 +1,38 @@
 .slider {
-    .slide3-caption {
-        font-family: $quicksand;
+    font-family: $quicksand;
+
+    .slide2-caption {
         background-color: $transparent-black;
+    }
+
+    .slide3-caption {
+        background-color: $transparent-black;
+        color: $main-color;
+    }
+
+    .slide4-caption {
+        color: $off-white;
+        font-size: $md-font;
+    }
+
+    .slide4-caption {
         color: $main-color;
     }
 
     .indicators .indicator-item.active {
         background-color: darken($main-color, 10%) !important;
+    }
+}
+
+@media (max-width: $md-break-point) {
+    .slider {
+        li .caption {
+            left: 0 !important;
+            top: 50% !important;
+            width: 100% !important;
+        }
+        .slide3-caption {
+            font-size: $md-font !important;
+        }
     }
 }

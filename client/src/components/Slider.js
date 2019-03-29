@@ -23,36 +23,32 @@ class Slider  extends Component {
                     <li>
                         <img src={slide1} alt="Slide 1" />
                         <div className="caption center-align">
-                            <h3>This is our big Tagline</h3>
-                            <h5 className="light grey-text text-lighten-3">Here's a Subtitle</h5>
+                            <h3>St. Kizito</h3>
+                            <h5>One Big Family...</h5>
                         </div>
                     </li>
                     <li>
                         <img src={slide2} alt="Slide 2" />
                         <div className="caption center-align">
-                            <h3>This is our big Tagline</h3>
-                            <h5 className="light grey-text text-lighten-3">Here's a Subtitle</h5>
+                            <h4 className="slide2-caption">Let them construct a sanctuary for me, that I may dwell in them</h4>
                         </div>
                     </li>
                     <li>
                         <img src={slide3} alt="Slide 3" />
                         <div className="caption center-align">
                             <h3 className="slide3-caption">Love God, Serve God; Everything is in that</h3>
-                            {/* <h5 className="light grey-text text-lighten-3">Here's a Subtitle</h5>*/}
                         </div>
                     </li>
                     <li>
                         <img src={slide4} alt="Slide 4" />
                         <div className="caption center-align">
-                            <h3>This is our big Tagline</h3>
-                            <h5 className="light grey-text text-lighten-3">Here's a Subtitle</h5>
+                            <h5 className="slide4-caption">God abides in us and his love is perfected in us.</h5>
                         </div>
                     </li>
                     <li>
                         <img src={slide5} alt="Slide 5" />
                         <div className="caption center-align">
-                            <h3>This is our big Tagline</h3>
-                            <h5 className="light grey-text text-lighten-3">Here's a Subtitle</h5>
+                            <h3 className="slide4-caption">Shrine of the Blessed Virgin Mary</h3>
                         </div>
                     </li>
                 </ul>
