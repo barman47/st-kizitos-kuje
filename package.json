@@ -31,8 +31,6 @@
     "concurrently": "^4.1.0",
     "express": "^4.16.4",
     "nodemailer": "^5.1.1",
-    "sendpulse-api": "^1.1.1",
-    "sib-api-v3-sdk": "^7.1.2",
     "validator": "^10.11.0"
   }
 }

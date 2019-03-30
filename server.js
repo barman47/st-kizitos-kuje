@@ -1,5 +1,4 @@
 const express = require('express');
-// const sgMail = require('@sendgrid/mail');
 const nodemailer = require('nodemailer');
 const path = require('path');
 
@@ -26,14 +25,13 @@ app.post('/sendMessage', (req, res) => {
         return res.status(400).json(errors);
     }
 
-    // sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     const transporter = nodemailer.createTransport({
         host: 'smtp.mail.yahoo.com',
         port: 465,
         secure: true,
         auth: {
-            user: 'nomsouzoanya@yahoo.co.uk',
-            pass: 'vicecity'
+            user: process.env.EMAIL_ADDRESS,
+            pass: process.env.EMAIL_PASSWORD
         },
         tls: {
             rejectUnauthorized: false
@@ -48,18 +46,8 @@ app.post('/sendMessage', (req, res) => {
         to: 'stkizitosec17@gmail.com',
         from: req.body.email,
         subject: 'Message From St. Kizito Website',
-        // text: 'and easy to do anywhere, even with Node.js',
         html: messageContent
-    };
-    // sgMail.send(msg)
-    //     .then(() => {
-    //         console.log('Message Sent...');
-    //         return res.status(200).json({ msg: 'Message sent. You will be contacted shortly.' });
-    //     })
-    //     .catch(err => {
-    //         console.log(err);
-    //         return res.status(500).json(err);
-    //     });
+    }
 
     transporter.sendMail(msg, (err) => {
         if (err) {

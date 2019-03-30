@@ -32,7 +32,14 @@ class Navigation extends Component {
         var elems = document.querySelectorAll('.sidenav');
         const options = { edge: 'right' };
         // eslint-disable-next-line
-        var instances = M.Sidenav.init(elems, options);
+        var instance = M.Sidenav.init(elems, options);
+
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        mobileLinks.forEach((mobileLink) => {
+            mobileLink.addEventListener('click', (e) => {
+                instance[0].close();
+            });
+        });
 
         const navbar = document.querySelector('#push');
         this.setState({ top: navbar.offsetTop, height: navbar.offsetHeight });
